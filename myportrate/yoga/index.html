@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ヨガスタジオOPEN</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $("#page-top a").click(function() {
+                    $(html.body).animate({scrollTop:0}, 1000);
+                    return false;
+                });
+            });
+        </script>
+        <script>
+            function fncBMI() {
+                var bmi, w, h;//BMI=bmi, 体重=w, 身長=h
+                w = eval(document.bmi.bmiWeight.value);
+                h = eval(document.bmi.bmiHeight.value)/100;//mに変換
+                bmi = w/(h * h);
+                alert('あなたのBMI値は' + bmi + 'です。');
+                document.bmi.bmiAns.value = bmi;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>ヨガスタジオ7月16日OPEN!　月額2,500円</h1>  
+            <figure>
+                <img src="images/yoga-woman.jpg" alt="ヨガスタジオOPEN">
+                <figcaption>ヨガで心と体のバランスを整えよう</figcaption>
+            </figure>
+            <p><a href="#cta">今すぐ申し込む</a></p>   
+        </header>
+        <main> 
+            <p><h2>事実、<span class="yellow-futo">30代以上の方</span>がヨガをはじめています。</h2>
+                <div class="cv-contents">
+                    <figure>
+                        <img src="images/yoga-cv.jpg" alt="会員様の声">
+                        <figcaption>カラダのバランスもアップ!</figcaption>
+                    </figure>
+                    <blockquote class="clearfix"><h3>体質が変わった会員様の声</h3>
+                        肩こりがなくなりました(30代)<br>最近ぎっくり腰になりません。(40代)
+                    </blockquote>                    
+                </div>
+            </p>
+            <p><h3>期待できる効果!</h3>
+                ぽっこり<big><strong>お腹</strong></big>に
+            </p>
+            <form name="bmi">
+                <p>最近体型が気になる方はBMI値を見てみましょう!<br>
+                    『BMI=体重(kg)÷身長(m)×身長(m)』
+                </p>
+                    体重:<input type="text" name="bmiWeight">kg<br>
+                    身長:<input type="text" name="bmiHeight">cm
+                    <input type="button" value="計算" onclick="fncBMI()"><br>
+                    結果:<input type="text" name="bmiAns">
+            </form>
+            <p id="page-top"><a href="#">TOPに戻る</a></p>
+            <p class="kadomaru-box">他にも3つのヨガ効果!</p>
+            <p>
+                <ul>
+                    <li>気持ちリセット</li>
+                    <li>体幹ほぐし</li>
+                    <li>デトックス</li>
+                </ul>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N4k2SKL0vvM?rel=0"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <p id="cta">
+                <a target="_blank" href="https://www.google.co.jp">お申込みはこちらから</a>
+            </p>
+        </main>
+        <footer>
+            &copy;2021 yotuba-yoga-studio.
+        </footer>
+    </body>
+</html>
